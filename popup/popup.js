@@ -1,9 +1,13 @@
 'use strict';
 
 const settings = {
-  // Имя хабровчанина нужно брать из настроек
-  user: 'denvdmj',
-  domains: ['habr.com', 'geektimes.com'],
+  // Имя хабровчанина из настроек
+  user: localStorage['options.html#habroname'] || '',
+  // domains: ['habr.com', 'geektimes.com']
+  // Geektimes переехал на Хабр
+  // 28 мая 2018 года Geektimes стал частью Хабра.
+  // Все публикации с комментариями переехали в поток «Гиктаймс».
+  domains: ['habr.com'],
   page: {
     selectors: {
       post:       ':scope > .content-list__item_post > .post',
@@ -54,6 +58,14 @@ const HabrLoader = (settings => {
 
   return {
     get: (query, callback) => {
+
+      if (settings.user === '') {
+        const error = 'Зайдите в настройки и укажите хаброимя';
+        document.writeln(error);
+        console.error(error);
+        return;
+      }
+
       settings.domains.forEach(domain => {
         const processPage = text => {
           const selectors = settings.page.selectors;

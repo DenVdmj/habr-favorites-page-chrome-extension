@@ -3,6 +3,10 @@
   "name": "Habr Favorits",
   "description": "Habr Favorits",
   "version": "0.0.3.1",
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": false
+  },
   "background": {
     "persistent": false,
     "scripts": ["background.js"]
