@@ -1,0 +1,41 @@
+{
+  "manifest_version": 2,
+  "name": "Habr Favorits",
+  "description": "Habr Favorits",
+  "version": "0.0.3.1",
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_title": "Initializing Habr Favorits",
+    "default_icon": {
+       "16": "images/icon-tm-2-pal16-16.png",
+       "19": "images/icon-tm-2-pal16-19.png",
+       "32": "images/icon-tm-2-pal16-32.png",
+       "48": "images/icon-tm-2-pal16-48.png",
+       "64": "images/icon-tm-2-pal16-64.png",
+      "128": "images/icon-tm-2-pal16-128.png"
+    }
+  },
+  "icons": {
+     "16": "images/icon-tm-2-pal16-16.png",
+     "19": "images/icon-tm-2-pal16-19.png",
+     "32": "images/icon-tm-2-pal16-32.png",
+     "48": "images/icon-tm-2-pal16-48.png",
+     "64": "images/icon-tm-2-pal16-64.png",
+    "128": "images/icon-tm-2-pal16-128.png"
+  },
+  "permissions": [
+    "https://habr.com/*",
+    "https://geektimes.com/*",
+    "http://habr.com/*",
+    "http://geektimes.com/*",
+    "contextMenus",
+    "notifications",
+    "tabs",
+    "unlimitedStorage"
+  ]
+}
+
+
